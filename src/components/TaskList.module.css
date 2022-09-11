@@ -1,0 +1,64 @@
+.task {
+  list-style: none;
+  font-size: 0.875rem;
+  color: var(--gray-100);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+  background: var(--gray-500);
+  padding: 1rem;
+}
+
+.task + .task {
+  margin-top: 0.75rem;
+}
+
+.task button {
+  background: transparent;
+  padding: 0.375rem;
+  line-height: 0;
+  border-radius: 8px;
+  align-self: flex-start;
+}
+
+.deleteButton {
+  box-sizing: initial;
+  color: var(--gray-300);
+  transition: all .1s;
+}
+
+.deleteButton:hover,
+.deleteButton:focus {
+  background: var(--gray-400);
+  color: var(--danger);
+}
+
+.buttonTaskCompleted:hover svg path:nth-child(1),
+.buttonTaskCompleted:hover svg path:nth-child(2) {
+  fill: var(--purple);
+}
+
+.buttonTaskIncomplete:hover svg path:nth-child(1) {
+  fill: var(--blue-dark);
+  opacity: 0.2;
+}
+
+.buttonTaskIncomplete:hover svg path:nth-child(2) {
+  fill: var(--blue-dark);
+}
+
+.task span {
+  justify-self: start;
+  flex: 1;
+}
+
+.taskCompleted {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
