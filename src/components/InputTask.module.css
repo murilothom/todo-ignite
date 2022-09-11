@@ -1,0 +1,25 @@
+.contentInput {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: -2rem;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  color: var(--gray-100);
+  background: var(--blue-dark);
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.input {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-700);
+}

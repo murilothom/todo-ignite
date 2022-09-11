@@ -8,9 +8,11 @@ import { Tasks } from './components/Tasks'
 
 export function App() {
   return (
-    <main className={styles.wrapper}>
+    <main>
       <Header />
-      <Tasks />
+      <div className={styles.wrapper}>
+        <Tasks />
+      </div>
     </main>
   )
 }

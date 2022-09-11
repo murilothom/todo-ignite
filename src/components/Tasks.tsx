@@ -1,13 +1,12 @@
 import React from 'react'
 
+import { InputTask } from './InputTask'
+
 export function Tasks () {
   return (
     <section>
 
-      <form>
-        <input type="text" placeholder="Adicione uma nova tarefa" />
-        <button type="button">Criar</button>
-      </form>
+      <InputTask />
       
       <article>
         <header>
