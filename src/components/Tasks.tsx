@@ -1,6 +1,9 @@
 import React from 'react'
 
+import styles from './Tasks.module.css'
+
 import { InputTask } from './InputTask'
+import { WithoutTasks } from './WithoutTasks'
 
 export function Tasks () {
   return (
@@ -8,21 +11,20 @@ export function Tasks () {
 
       <InputTask />
       
-      <article>
-        <header>
-          <div>
-            <strong>Taregas criadas</strong> <span>0</span>
+      <section>
+        <header className={styles.headerTasks}>
+          <div className={styles.createdTasks}>
+            <strong>Taregas criadas</strong><span>0</span>
           </div>
-          <div>
-            <strong>Concluídas</strong> <span>0</span>
+          <div className={styles.completedTasks}>
+            <strong>Concluídas</strong><span>0</span>
           </div>
         </header>
         
-        <main>
-          <strong>Você ainda não tem tarefas cadastradas</strong>
-          <span>Crie tarefas e organize seus itens a fazer</span>
+        <main className={styles.tasksList}>
+          <WithoutTasks />
         </main>
-      </article>
+      </section>
 
     </section>
   )

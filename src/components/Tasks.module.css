@@ -1,0 +1,25 @@
+.headerTasks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.headerTasks span {
+  padding: 0.125rem 0.5rem;
+  border-radius: 10px;
+  background: var(--gray-400);
+  margin-left: .5rem;
+  color: var(--gray-200);
+}
+
+.createdTasks {
+  color: var(--blue);
+}
+
+.completedTasks {
+  color: var(--purple);
+}
