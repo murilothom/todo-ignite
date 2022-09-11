@@ -21,6 +21,7 @@ export function TaskList ({ task, onHandleClickTask, onHandleDeleteTask }: TaskP
         <button
           onClick={() => onHandleClickTask(task.id)}
           className={task.isComplete ? styles.buttonTaskCompleted : styles.buttonTaskIncomplete}
+          title={task.isComplete ? 'Tarefa completa' : 'Tarefa incompleta'}
         >
           {task.isComplete 
             ?
@@ -42,7 +43,8 @@ export function TaskList ({ task, onHandleClickTask, onHandleDeleteTask }: TaskP
           className={task.isComplete ? styles.taskCompleted : styles.taskIncomplete}>
           {task.title}
         </span>
-        <button 
+        <button
+          title='Deletar tarefa'
           onClick={() => onHandleDeleteTask(task.id)}
           className={styles.deleteButton}
         >
