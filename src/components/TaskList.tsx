@@ -9,14 +9,17 @@ interface TaskProps {
     id: string,
     title: string,
     isComplete: boolean,
-  }
+  },
+  onHandleClickTask: (id: string) => void,
+  onHandleDeleteTask: (id: string) => void
 }
 
-export function TaskList ({ task }: TaskProps) {
+export function TaskList ({ task, onHandleClickTask, onHandleDeleteTask }: TaskProps) {
   return (
     <>
       <li className={styles.task}>
         <button
+          onClick={() => onHandleClickTask(task.id)}
           className={task.isComplete ? styles.buttonTaskCompleted : styles.buttonTaskIncomplete}
         >
           {task.isComplete 
@@ -39,7 +42,10 @@ export function TaskList ({ task }: TaskProps) {
           className={task.isComplete ? styles.taskCompleted : styles.taskIncomplete}>
           {task.title}
         </span>
-        <button className={styles.deleteButton}>
+        <button 
+          onClick={() => onHandleDeleteTask(task.id)}
+          className={styles.deleteButton}
+        >
           <Trash size={16} />
         </button>
       </li>
